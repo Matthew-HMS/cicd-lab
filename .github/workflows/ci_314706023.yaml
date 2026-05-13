@@ -1,6 +1,7 @@
 name: ci
 
-'on': [push]
+on:
+  push:
 
 jobs:
   verify:
@@ -25,5 +26,5 @@ jobs:
         run: npm run format:check
 
       - name: Test
-        run: npm run test -- --reporter=default --reporter=junit --outputFile=reports/junit.xml
+        run: npm run test
 
